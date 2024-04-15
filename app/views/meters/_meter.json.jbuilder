@@ -1,0 +1,2 @@
+json.extract! meter, :id, :new_meter_number, :reference_no, :status, :older_meter_no, :old_meter_reading, :new_meter_reading, :connection_type, :bill_month, :longitude, :latitude, :sub_divisions_id, :meter_type, :kwh_mf, :sanction_load, :full_name, :address, :qc_check, :application_no, :green_meter, :telco, :sim_no, :signal_strength, :picture_upload, :created_at, :updated_at
+json.url meter_url(meter, format: :json)

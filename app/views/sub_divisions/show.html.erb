@@ -1,0 +1,12 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @sub_division %>
+
+<div>
+  <%= link_to "Edit this sub division", edit_disco_region_division_sub_division_path(@disco,@region,@division,@sub_division) %> |
+  <%= link_to "Back to sub divisions", disco_region_division_sub_divisions_path(@disco,@region,@division) %>
+
+  <%= button_to "Destroy this sub division", disco_region_division_sub_division_path(@disco,@region,@division,@sub_division), method: :delete %>
+  <br/>
+  <%= link_to "new Meter",new_disco_region_division_sub_division_meter_path(@disco,@region,@division,@sub_division) %>
+</div>

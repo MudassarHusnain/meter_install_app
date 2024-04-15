@@ -1,0 +1,9 @@
+<h1>New meter</h1>
+
+<%= render "form", meter: @meter,disco: @disco,region: @region,division: @division,sub_division:@sub_division %>
+
+<br>
+
+<div>
+  <%= link_to "Back to meters", disco_region_division_sub_division_meters_path(@disco,@region,@division,@sub_division) %>
+</div>

@@ -1,0 +1,9 @@
+<h1>New sub division</h1>
+
+<%= render "form", sub_division: @sub_division,division:@division,region: @region, disco: @disco %>
+
+<br>
+
+<div>
+  <%= link_to "Back to sub divisions", disco_region_division_sub_divisions_path(@disco,@region,@division) %>
+</div>

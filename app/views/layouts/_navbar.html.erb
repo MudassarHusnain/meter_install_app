@@ -1,0 +1,47 @@
+<% if current_user %>
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar -->
+    <div class="col-lg-3 col-md-4 col-sm-12 p-0 sidebar">
+      <div class="btn-group">
+        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-auto-close="false" data-bs-toggle="dropdown" aria-expanded="false">
+          Discos
+        </button>
+        <ul class="dropdown-menu">
+        <% Disco.all.each do |disco| %>
+  <li class="dropdown-submenu">
+    <%= link_to disco.name, disco_path(disco), class: "dropdown-item disco-item-#{disco.id} dropdown-toggle", "data-bs-toggle" => "dropdown", "data-bs-auto-close" => "false" %>
+    <ul class="dropdown-menu">
+      <% disco.regions.each do |region| %>
+        <li><%= link_to region.name, disco_region_path(disco, region), class: "dropdown-item dropdown-toggle" %></li>
+      <% end %>
+    </ul>
+  </li>
+<% end %>
+
+
+
+        </ul>
+      </div>
+      <%= link_to 'Logout', destroy_user_session_path, data: { remote: :true, turbo_method: :delete }, class: 'logout-link text-dark ms-5 btn btn-light btn-lg' %>
+    </div>
+    <!-- End Sidebar -->
+
+    <!-- Main Content -->
+    <div class="col-lg-9 col-md-8 col-sm-12 main-content">
+      <%= yield %>
+    </div>
+    <!-- End Main Content -->
+  </div>
+</div>
+<% else %>
+<div class="col-lg-9 col-md-8 col-sm-12 main-content">
+  <%= yield %>
+</div>
+<% end %>
+
+
+<script>
+
+
+</script>

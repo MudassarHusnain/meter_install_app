@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+ <%= render "region",disco: @disco,region: @region %> 
+
+<div>
+  <%= link_to "Edit this region", edit_disco_region_path(@disco,@region) %> |
+  <%= link_to "Back to regions", disco_regions_path %>
+  <%= link_to "New Division", new_disco_region_division_path(@disco,@region)%>
+  <%= button_to "Destroy this region", disco_region_path(@disco,@region), method: :delete %>
+</div>

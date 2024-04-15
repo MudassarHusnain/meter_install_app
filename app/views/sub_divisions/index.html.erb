@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Sub divisions</h1>
+
+<div id="sub_divisions">
+  <% @sub_divisions.each do |sub_division| %>
+    <%= render sub_division %>
+    <p>
+      <%= link_to "Show this sub division", disco_region_division_sub_division_path(@disco,@region,@division,sub_division) %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New sub division", new_disco_region_division_sub_division_path(@disco,@region,@division) %>

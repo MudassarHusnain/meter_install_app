@@ -1,0 +1,10 @@
+<h1>New division</h1>
+
+<%= render "form", division: @division,region: @region,disco: @disco %>
+
+<br>
+
+<div>
+  <%= link_to "Back to divisions", disco_region_divisions_path(@disco, @region) %>
+</div>
+

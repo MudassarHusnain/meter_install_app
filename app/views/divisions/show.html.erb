@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @division %>
+
+<div>
+  <%= link_to "Edit this division", edit_disco_region_division_path(@disco,@region,@division) %> |
+  <%= link_to "Back to divisions", disco_region_divisions_path(@disco,@region) %>
+
+  <%= button_to "Destroy this division", disco_region_division_path(@disco,@region,@division), method: :delete %>
+
+  <br/>
+  <%= link_to "new_subdivsion",new_disco_region_division_sub_division_path(@disco,@region,@division) %>
+</div>

@@ -1,0 +1,132 @@
+<%= form_with(model: [sub_division,meter],url: disco_region_division_sub_division_meters_path(disco,region,division,sub_division)) do |form| %>
+  <% if meter.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(meter.errors.count, "error") %> prohibited this meter from being saved:</h2>
+
+      <ul>
+        <% meter.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :new_meter_number, style: "display: block" %>
+    <%= form.text_field :new_meter_number %>
+  </div>
+
+  <div>
+    <%= form.label :reference_no, style: "display: block" %>
+    <%= form.text_field :reference_no %>
+  </div>
+
+  <div>
+    <%= form.label :status, style: "display: block" %>
+    <%= form.text_field :status %>
+  </div>
+
+  <div>
+    <%= form.label :older_meter_no, style: "display: block" %>
+    <%= form.text_field :older_meter_no %>
+  </div>
+
+  <div>
+    <%= form.label :old_meter_reading, style: "display: block" %>
+    <%= form.number_field :old_meter_reading %>
+  </div>
+
+  <div>
+    <%= form.label :new_meter_reading, style: "display: block" %>
+    <%= form.number_field :new_meter_reading %>
+  </div>
+
+  <div>
+    <%= form.label :connection_type, style: "display: block" %>
+    <%= form.text_field :connection_type %>
+  </div>
+
+  <div>
+    <%= form.label :bill_month, style: "display: block" %>
+    <%= form.datetime_field :bill_month %>
+  </div>
+
+  <div>
+    <%= form.label :longitude, style: "display: block" %>
+    <%= form.text_field :longitude %>
+  </div>
+
+  <div>
+    <%= form.label :latitude, style: "display: block" %>
+    <%= form.text_field :latitude %>
+  </div>
+
+  <div>
+    <%= form.label :sub_division_id, style: "display: block" %>
+    <%= form.text_field :sub_division_id %>
+  </div>
+
+  <div>
+    <%= form.label :meter_type, style: "display: block" %>
+    <%= form.text_field :meter_type %>
+  </div>
+
+  <div>
+    <%= form.label :kwh_mf, style: "display: block" %>
+    <%= form.text_field :kwh_mf %>
+  </div>
+
+  <div>
+    <%= form.label :sanction_load, style: "display: block" %>
+    <%= form.text_field :sanction_load %>
+  </div>
+
+  <div>
+    <%= form.label :full_name, style: "display: block" %>
+    <%= form.text_field :full_name %>
+  </div>
+
+  <div>
+    <%= form.label :address, style: "display: block" %>
+    <%= form.text_area :address %>
+  </div>
+
+  <div>
+    <%= form.label :qc_check, style: "display: block" %>
+    <%= form.check_box :qc_check %>
+  </div>
+
+  <div>
+    <%= form.label :application_no, style: "display: block" %>
+    <%= form.text_field :application_no %>
+  </div>
+
+  <div>
+    <%= form.label :green_meter, style: "display: block" %>
+    <%= form.text_field :green_meter %>
+  </div>
+
+  <div>
+    <%= form.label :telco, style: "display: block" %>
+    <%= form.text_field :telco %>
+  </div>
+
+  <div>
+    <%= form.label :sim_no, style: "display: block" %>
+    <%= form.text_field :sim_no %>
+  </div>
+
+  <div>
+    <%= form.label :signal_strength, style: "display: block" %>
+    <%= form.text_field :signal_strength %>
+  </div>
+
+  <div>
+    <%= form.label :picture_upload, style: "display: block" %>
+    <%= form.text_field :picture_upload %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

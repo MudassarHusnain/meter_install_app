@@ -1,0 +1,51 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  new_meter_number: MyString
+  reference_no: MyString
+  status: MyString
+  older_meter_no: MyString
+  old_meter_reading: 1
+  new_meter_reading: 1
+  connection_type: MyString
+  bill_month: 2024-04-06 22:47:26
+  longitude: 1.5
+  latitude: 1.5
+  sub_divisions: one
+  meter_type: MyString
+  kwh_mf: 1.5
+  sanction_load: 1.5
+  full_name: MyString
+  address: MyText
+  qc_check: false
+  application_no: MyString
+  green_meter: MyString
+  telco: MyString
+  sim_no: MyString
+  signal_strength: MyString
+  picture_upload: MyString
+
+two:
+  new_meter_number: MyString
+  reference_no: MyString
+  status: MyString
+  older_meter_no: MyString
+  old_meter_reading: 1
+  new_meter_reading: 1
+  connection_type: MyString
+  bill_month: 2024-04-06 22:47:26
+  longitude: 1.5
+  latitude: 1.5
+  sub_divisions: two
+  meter_type: MyString
+  kwh_mf: 1.5
+  sanction_load: 1.5
+  full_name: MyString
+  address: MyText
+  qc_check: false
+  application_no: MyString
+  green_meter: MyString
+  telco: MyString
+  sim_no: MyString
+  signal_strength: MyString
+  picture_upload: MyString

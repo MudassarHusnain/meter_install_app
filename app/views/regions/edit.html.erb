@@ -1,0 +1,10 @@
+<h1>Editing region</h1>
+
+<%= render "form", region: @region,disco: @disco %>
+
+<br>
+
+<div>
+  <%= link_to "Show this region", disco_region_path(@disco,@region) %> |
+  <%= link_to "Back to regions", disco_regions_path(@disco,@region) %>
+</div>
